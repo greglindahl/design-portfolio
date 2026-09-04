@@ -1,0 +1,48 @@
+---
+import { getCollection, render } from 'astro:content';
+import CaseStudyLayout from '../../layouts/CaseStudyLayout.astro';
+import Figure from '../../components/Figure.astro';
+import FigureGrid from '../../components/FigureGrid.astro';
+import { withBase } from '../../lib/base';
+
+export async function getStaticPaths() {
+  const projects = await getCollection('work');
+  return projects.map((project) => ({
+    params: { slug: project.id },
+    props: { project },
+  }));
+}
+
+const { project } = Astro.props;
+const { Content } = await render(project);
+const others = (await getCollection('work'))
+  .filter((item) => item.id !== project.id)
+  .sort((a, b) => a.data.order - b.data.order);
+---
+
+<CaseStudyLayout
+  title={project.data.title}
+  description={project.data.summary}
+  outcomeHeadline={project.data.outcomeHeadline}
+  company={project.data.company}
+  role={project.data.role}
+  year={project.data.year}
+  tags={project.data.tags}
+  summary={project.data.summary}
+  sections={project.data.sections}
+>
+  <Content components={{ Figure, FigureGrid }} />
+  <aside class="more-work">
+    <h2>Selected work</h2>
+    <ul>
+      {others.map((item) => (
+        <li>
+          <a href={withBase(`work/${item.id}`)}>
+            <span>{item.data.title}</span>
+            <span>{item.data.year}</span>
+          </a>
+        </li>
+      ))}
+    </ul>
+  </aside>
+</CaseStudyLayout>

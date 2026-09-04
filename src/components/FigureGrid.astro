@@ -1,0 +1,19 @@
+---
+interface Props {
+  images: { src: string; alt?: string }[];
+  caption?: string;
+}
+
+import { withBase } from '../lib/base';
+
+const { images, caption } = Astro.props;
+---
+
+<figure class="figure">
+  <div class="figure-grid">
+    {images.map((image) => (
+      <img src={withBase(image.src)} alt={image.alt ?? ''} loading="lazy" />
+    ))}
+  </div>
+  {caption && <figcaption>{caption}</figcaption>}
+</figure>

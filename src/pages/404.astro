@@ -1,0 +1,11 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { withBase } from '../lib/base';
+---
+
+<BaseLayout title="Page not found – Greg Lindahl">
+  <main class="wrap hero">
+    <h1>Page not found</h1>
+    <p><a href={withBase()}>Back to work</a></p>
+  </main>
+</BaseLayout>

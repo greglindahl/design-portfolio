@@ -1,0 +1,20 @@
+{
+  "name": "design-portfolio",
+  "type": "module",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "dependencies": {
+    "@astrojs/mdx": "^4.3.6",
+    "@fontsource-variable/geist": "^5.2.8",
+    "astro": "^5.13.10"
+  },
+  "devDependencies": {
+    "sharp": "^0.34.4",
+    "typescript": "^5.9.2"
+  }
+}

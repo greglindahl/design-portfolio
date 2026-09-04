@@ -1,0 +1,145 @@
+---
+title: API Integration Application
+outcomeHeadline: A visual integration layer on top of an API-first platform
+company: Cloud Elements
+role: Lead UX Designer
+year: "2019"
+tags: [B2B, API, Enterprise]
+heroImage: images/work/api-integration/hero.webp
+order: 3
+summary: I led design for Cloud Elements’ API integration application — a UI on top of an API-first platform so systems integrators and citizen integrators could connect, map, and orchestrate data without living in code.
+sections:
+  - { id: overview, label: Overview }
+  - { id: problem, label: Problem }
+  - { id: research, label: Research }
+  - { id: product, label: Product }
+  - { id: system, label: Design system }
+  - { id: outcomes, label: Outcomes }
+---
+
+<section id="overview">
+
+## Overview
+
+Cloud Elements is a cloud API integration platform: publish, integrate, aggregate, and manage APIs in one place, with prebuilt connectors, data modeling, and orchestration. The company was API-first. To reach new markets it needed a UI for end-to-end integrations.
+
+I led the experience, managed a designer, worked with three engineers, ran Lean UX workshops, and maintained the Cloud Elements Design System.
+
+<Figure src="images/work/api-integration/hero.webp" alt="Cloud Elements catalog of connectors" caption="The Elements catalog — where an integration starts." />
+
+</section>
+
+<section id="problem">
+
+## API-first was leaving revenue on the table
+
+Enterprise deals were asking for low-code/no-code. Global systems integrators and citizen integrators could not build on an API-only story. That limited growth.
+
+**Solution.** A visual application on the existing APIs: connect services, map data, orchestrate workflows, then debug and administer. Success meant consistent, reusable tooling to sync applications end to end.
+
+</section>
+
+<section id="research">
+
+## Design for Brenda, then tell a three-step story
+
+I kicked off with sales, engineering, product, and leadership on outcomes, persona, and hypotheses, then researched the integrator and the competitive set.
+
+<Figure src="images/work/api-integration/persona.webp" alt="Brenda, global systems integrator persona" caption="Brenda wants to connect systems quickly, with docs she does not have to wade through." />
+
+The product story was three steps: connect services, map data, orchestrate data — plus admin and logging for debug and audit.
+
+<Figure src="images/work/api-integration/sitemap.webp" alt="Cloud Elements application sitemap" caption="Sitemap around connect, map, orchestrate, plus admin and logs." />
+
+</section>
+
+<section id="product">
+
+## Connect, map, orchestrate
+
+**Elements.** A catalog to browse services and create a connection. Testing asked what belonged on a service card and whether a code snippet at connect-time helped developers. Users also needed API docs and object lists before they connected.
+
+<FigureGrid
+  images={[
+    { src: 'images/work/api-integration/catalog.webp', alt: 'Elements catalog cards' },
+    { src: 'images/work/api-integration/connect.webp', alt: 'Salesforce connection screen' },
+  ]}
+  caption="Catalog and connection, including auth type and a snippet for developers."
+/>
+
+<Figure src="images/work/api-integration/api-docs.webp" alt="Element API documentation" caption="API docs beside the catalog, so users can inspect objects before they connect." />
+
+**Virtual Data Resources.** One canonical object, many vendor field mappings. A JavaScript editor sat next to the UI for power users. Testing a transformation in place mattered as much as creating it.
+
+<FigureGrid
+  images={[
+    { src: 'images/work/api-integration/vdr-overview.webp', alt: 'Virtual data resource overview' },
+    { src: 'images/work/api-integration/vdr-map.webp', alt: 'Field mapping' },
+    { src: 'images/work/api-integration/vdr-test.webp', alt: 'Test a transformation' },
+  ]}
+  caption="Create a virtual object, map vendor fields, and test the transform."
+/>
+
+**Formulas.** Orchestration was the hard design problem. Users needed reusable variables, multiple triggers, and logs they could actually debug. Templates cut duplicate work.
+
+<FigureGrid
+  images={[
+    { src: 'images/work/api-integration/formulas.webp', alt: 'Formula workflow builder' },
+    { src: 'images/work/api-integration/formula-logs.webp', alt: 'Formula run logs' },
+    { src: 'images/work/api-integration/formula-debug.webp', alt: 'Formula debugger' },
+  ]}
+  caption="Formula builder, logs, and debug — all powered by the same APIs."
+/>
+
+**Activity and admin.** One place for API traffic, search, filter, and export. Admin covered accounts, roles, password policy, SAML, and branding so partners like Axway could offer integrations without building a UI.
+
+<FigureGrid
+  images={[
+    { src: 'images/work/api-integration/logs.webp', alt: 'Platform activity logs' },
+    { src: 'images/work/api-integration/branding.webp', alt: 'White-label branding settings' },
+  ]}
+  caption="Activity logs and white-label branding."
+/>
+
+</section>
+
+<section id="system">
+
+## A system that could wear two brands
+
+We built the Cloud Elements Design System in React Storybook so every surface stayed consistent. That mattered twice: for our own UI, and for SAP, who needed UI5-flavored components on login while Cloud Elements stayed Material-based. SAP used our connectors, mapping, and workflows to power Open Connectors.
+
+<FigureGrid
+  images={[
+    { src: 'images/work/api-integration/ds-button.webp', alt: 'Design system buttons' },
+    { src: 'images/work/api-integration/ds-input.webp', alt: 'Design system inputs' },
+    { src: 'images/work/api-integration/ds-tabs.webp', alt: 'Design system tabs' },
+    { src: 'images/work/api-integration/ds-dropdown.webp', alt: 'Design system dropdown' },
+  ]}
+  caption="Pieces of the Cloud Elements Design System."
+/>
+
+</section>
+
+<section id="outcomes">
+
+## What shipped changed who we could sell to
+
+<div class="metrics">
+  <div class="metric">
+    <strong>30%</strong>
+    <span>less development time to stand up an integration</span>
+  </div>
+  <div class="metric">
+    <strong>20%</strong>
+    <span>higher platform usage within three months from new UI users</span>
+  </div>
+  <div class="metric">
+    <strong>12%</strong>
+    <span>more new sales by reaching systems integrators</span>
+  </div>
+</div>
+
+**Next.** Better debug, a publishing flow for custom Elements / VDRs / Formula templates, and a Formula canvas that could be fully no-code.
+
+</section>

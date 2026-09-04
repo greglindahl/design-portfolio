@@ -1,0 +1,125 @@
+---
+title: Section 16 Reporting
+outcomeHeadline: A filing workflow legal teams could complete without CSM help
+company: Workiva
+role: UX Designer
+year: "2021"
+tags: [Enterprise, SEC, SaaS]
+heroImage: images/work/section-16/hero.webp
+order: 2
+summary: I designed the next generation of Section 16 reporting in Workiva. About 40% of the SEC base used the Classic experience. The goal was to keep what lawyers loved about the form, and move filing into a workflow they already trusted.
+sections:
+  - { id: overview, label: Overview }
+  - { id: problem, label: Problem }
+  - { id: discovery, label: Discovery }
+  - { id: workflow, label: Workflow }
+  - { id: form, label: Form }
+  - { id: outcomes, label: Outcomes }
+---
+
+<section id="overview">
+
+## Overview
+
+Section 16 is part of Workiva’s SEC filing suite. It is how officers, directors, and 10% shareholders report trades of company equity — for example, a CEO buying or selling stock.
+
+I designed Form 4 and the surrounding filing flow for NextGen, including research, workshops, IA, wireframes, tests, prototypes, Dart implementation support, and analytics.
+
+<Figure src="images/work/section-16/hero.webp" alt="Section 16 Form 4 in the Workiva platform" caption="Form 4, the most common Section 16 filing." />
+
+</section>
+
+<section id="problem">
+
+## Keep the form they loved, fix the filing they hated
+
+Classic users liked seeing the whole form and every table header while they added transactions. What they did not like was the rest of the process — footnotes, test file, and live file felt clunky.
+
+How might we bring Classic’s strengths into NextGen without losing the density legal teams expect?
+
+**Solution.** Use Workiva’s existing filing wizard, EDGARize supporting documents in-product, separate test and live file, and give footnotes a purpose-built experience with templates (most footnotes reuse language with different dates).
+
+Success: every customer can file without Customer Success stepping in.
+
+</section>
+
+<section id="discovery">
+
+## Legal users, not accountants
+
+I started by mapping where Section 16 sits in the reporting workflow, then interviewed customers and synthesized with stakeholders.
+
+Classic worked because users could see the entire form instead of adding transactions in a wizard or modal, read every column header, and spot editable fields. Lawyers wanted all the words on the page. Confidence in the numbers was the top priority across personas.
+
+<FigureGrid
+  images={[
+    { src: 'images/work/section-16/plan.webp', alt: 'Section 16 project plan' },
+    { src: 'images/work/section-16/personas.webp', alt: 'Section 16 personas' },
+  ]}
+  caption="Project plan and the three roles in a Section 16 filing — often legal, not finance."
+/>
+
+</section>
+
+<section id="workflow">
+
+## Put Form 4 in the wizard they already use
+
+A story map showed two clear wins: attach supporting documents such as a power of attorney inside Workiva, and split test file from live file so teams could track both.
+
+<Figure src="images/work/section-16/workflow.webp" alt="Proposed Form 4 filing workflow" caption="Proposed Form 4 workflow using the existing filing wizard." />
+
+A more detailed journey workshop listed stories, risks, and tech spikes. Early lo-fi tests asked three questions: does the wizard feel right, can we restyle the dense tables, and should footnotes live in a panel instead of a modal?
+
+Users loved the wizard and the separate test/live steps. They accepted a footnotes panel so they could still see the form. They rejected a prettier, less dense table. They wanted every header and every value.
+
+</section>
+
+<section id="form">
+
+## Density wins, then iterate the components
+
+High-fidelity used the current Workiva system first. Users enter from a dashboard and typically start a form for a reporting owner, so the dashboard stayed.
+
+<Figure src="images/work/section-16/dashboard.webp" alt="Section 16 dashboard" caption="Dashboard as the starting point for a new form." />
+
+<FigureGrid
+  images={[
+    { src: 'images/work/section-16/form.webp', alt: 'High-density Form 4 table' },
+    { src: 'images/work/section-16/panel.webp', alt: 'Add transaction in a right-hand panel' },
+  ]}
+  caption="Table density and a right-hand panel for adding a row — users still wanted inline edits like Classic."
+/>
+
+The wizard was a hit. The form itself did not wow anyone. Tables had too many columns, long headers, 30+ rows, and horizontal scroll tested poorly. I proposed another pass with Material-inspired components coming later in the year: denser tables, alternating rows, inline edit, and elevation to keep focus.
+
+Footnotes moved back to a movable modal after users asked to reposition the window over the form. A live SEC preview let filers check numbers before submit.
+
+<FigureGrid
+  images={[
+    { src: 'images/work/section-16/footnotes.webp', alt: 'Footnotes interaction' },
+    { src: 'images/work/section-16/preview.webp', alt: 'Live preview of the SEC form' },
+  ]}
+  caption="Footnotes returned to a modal; live preview for confidence before filing."
+/>
+
+</section>
+
+<section id="outcomes">
+
+## What we were aiming for
+
+<div class="metrics">
+  <div class="metric">
+    <strong>File without CSM</strong>
+    <span>every Section 16 customer completes a filing without Customer Success</span>
+  </div>
+  <div class="metric">
+    <strong>Hold CSAT</strong>
+    <span>satisfaction stays at or above Classic</span>
+  </div>
+</div>
+
+**Next.** Bulk upload from an external system, and brokerage connections so transactions are not typed in by hand.
+
+</section>

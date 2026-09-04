@@ -1,0 +1,117 @@
+---
+title: Cloud Elements Help Center
+outcomeHeadline: Documentation developers could scan instead of dig through
+company: Cloud Elements
+role: Lead UX Designer
+year: "2017"
+tags: [Docs, Website, API]
+heroImage: images/work/help-center/hero.webp
+order: 4
+summary: I led the Help Center redesign so developers could find API docs and guides fast enough to get to “hello world.” Clearer IA, search, and scannable article layouts cut documentation-related support tickets by 25%.
+sections:
+  - { id: overview, label: Overview }
+  - { id: problem, label: Problem }
+  - { id: research, label: Research }
+  - { id: design, label: Design }
+  - { id: outcomes, label: Outcomes }
+---
+
+<section id="overview">
+
+## Overview
+
+The Help Center was supposed to be the place customers learned the Cloud Elements API. In practice it did not point people clearly enough, or go deep enough, for them to succeed on their own.
+
+I led the redesign: research, Lean UX, competitive analysis, IA, wireframes, tests, prototypes, and front-end in HTML, CSS, and jQuery.
+
+<Figure src="images/work/help-center/hero.webp" alt="Cloud Elements Help Center homepage" caption="Help Center homepage, with a primary path for first-time users." />
+
+</section>
+
+<section id="problem">
+
+## Too many categories, not enough guidance
+
+Unclear docs increased the risk of losing customers and stalled usage.
+
+How might we create a documentation experience where developers can learn the platform quickly?
+
+**Goals.** Inform and guide, make any page findable, and present a layout people can scan.
+
+</section>
+
+<section id="research">
+
+## Developers want hello world, not a library
+
+I ran a Lean UX canvas with product, engineering, sales, and leadership, then built a developer persona and looked at other docs sites.
+
+<FigureGrid
+  images={[
+    { src: 'images/work/help-center/lean.webp', alt: 'Lean UX canvas' },
+    { src: 'images/work/help-center/persona.webp', alt: 'Developer persona' },
+  ]}
+  caption="Canvas and persona: get to hello world without reading a book."
+/>
+
+Developers were often handed the tool. They needed to get productive fast. The live Help Center had 12 top-level categories. Working with product, we cut that to seven and validated the structure in testing.
+
+<Figure src="images/work/help-center/sitemap.webp" alt="Help Center sitemap" caption="Seven categories instead of twelve." />
+
+</section>
+
+<section id="design">
+
+## Home for new users, nav and search for everyone else
+
+Balsamiq wires and frequent tests shaped layout before visual design. High-fidelity and Bootstrap prototypes came next; branding caught up to the Cloud Elements system later.
+
+<FigureGrid
+  images={[
+    { src: 'images/work/help-center/wire.webp', alt: 'Balsamiq wireframe' },
+    { src: 'images/work/help-center/ui.webp', alt: 'Higher-fidelity UI test' },
+  ]}
+  caption="Wires and UI tests before the branded build."
+/>
+
+The homepage led with a clear call to action for first-time users, with more to explore below. Global search and left nav let returning users jump. Guides got a right-hand outline, plus consistent treatment for tips, quotes, and images.
+
+<FigureGrid
+  images={[
+    { src: 'images/work/help-center/home.webp', alt: 'Help Center home on a laptop' },
+    { src: 'images/work/help-center/search.webp', alt: 'Search in the Help Center' },
+    { src: 'images/work/help-center/guide.webp', alt: 'Article layout with in-page nav' },
+  ]}
+  caption="Home, search, and a scannable guide layout."
+/>
+
+**Elements catalog.** Elements are prebuilt connectors (Box, Salesforce, and so on). The old IA listed them as child categories, which meant endless scrolling. We added search and filters and took children out of the left nav.
+
+<FigureGrid
+  images={[
+    { src: 'images/work/help-center/catalog.webp', alt: 'Elements catalog with search' },
+    { src: 'images/work/help-center/element.webp', alt: 'Salesforce Element documentation' },
+  ]}
+  caption="Catalog search and an Element reference page."
+/>
+
+</section>
+
+<section id="outcomes">
+
+## Fewer tickets, more first integrations
+
+<div class="metrics">
+  <div class="metric">
+    <strong>25%</strong>
+    <span>fewer support tickets about missing or weak documentation</span>
+  </div>
+  <div class="metric">
+    <strong>15%</strong>
+    <span>more customers completing a first integration without support</span>
+  </div>
+</div>
+
+**Next.** Stronger Element API docs, saved articles and snippets, and a forum for collaboration.
+
+</section>

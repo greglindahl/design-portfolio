@@ -1,0 +1,186 @@
+---
+title: TrustShare Portal and Deal Tracker
+outcomeHeadline: Reducing sales cycle time by 20% with a self-serve trust portal
+company: TrustCloud
+role: Lead UX Designer
+year: "2024"
+tags: [B2B, GRC, SaaS]
+heroImage: images/work/trustshare/hero.webp
+order: 1
+summary: I led design for TrustShare, turning a manual security assessment process into a streamlined workflow for compliance and sales teams. The self-serve portal helped grow the product from 30+ to 90+ customers and cut sales cycle time by 20%.
+sections:
+  - { id: overview, label: Overview }
+  - { id: problem, label: Problem }
+  - { id: research, label: Research }
+  - { id: approach, label: Approach }
+  - { id: portal, label: Portal }
+  - { id: admin, label: Admin }
+  - { id: outcomes, label: Outcomes }
+---
+
+<section id="overview">
+
+## Overview
+
+TrustShare is a customer-facing trust portal and deal tracker. Prospects can learn about a vendor’s compliance posture and download the documents they need, instead of waiting on questionnaires that stall the deal.
+
+I owned the end-to-end design: interviews, workshops, competitive analysis, IA, mockups, prototypes, testing, and specs.
+
+<Figure src="images/work/trustshare/hero.webp" alt="TrustShare customer portal with certifications and documents" caption="The customer-facing portal, with certifications and documents above the fold." />
+
+</section>
+
+<section id="problem">
+
+## The process was reactive and expensive
+
+When a company sells software, the buyer runs a third-party risk assessment — usually after interest is already there. Compliance teams gather documents and answer security questionnaires. That work stretches the sales cycle and hits revenue.
+
+How might we improve the security assessment process so we reduce the burden on compliance admins and the revenue impact on the company?
+
+**Solution.** A secure, self-serve trust portal so prospects can get what they need without a questionnaire on every deal. Key pieces: deal tracking for admins, CRM integration, a customizable public site, and reporting.
+
+<FigureGrid
+  images={[
+    { src: 'images/work/trustshare/early.webp', alt: 'Earlier version of the TrustShare portal' },
+    { src: 'images/work/trustshare/old-portal.webp', alt: 'Production portal before the redesign' },
+  ]}
+  caption="Where we started: a live portal with very few teams actually using it in their review process."
+/>
+
+</section>
+
+<section id="research">
+
+## Interviews showed a burdensome, after-hours workflow
+
+I knew little about security reviews, so I started with users. Getting the artifacts for a review was already slow. A questionnaire often turned a couple of days into 7–10. Requests landed on analysts with little notice, on top of their day jobs.
+
+Teams of two or three people were completing 300–500 questionnaires a year. The documents and questions were often the same from deal to deal.
+
+<blockquote class="quote">
+  “I often need to work nights and weekends to complete my questionnaires and meet deadlines.”
+  <br />
+  <span class="caption">James, Compliance Admin</span>
+</blockquote>
+
+I captured quotes and insights in FigJam and ran an alignment session so the team could see the job as users lived it. Outputs: six interviews, a discovery board, and a key-findings working session.
+
+<Figure src="images/work/trustshare/findings.webp" alt="Key findings from user interviews" caption="Findings from interviews, used to align product, design, and engineering." />
+
+</section>
+
+<section id="approach">
+
+## Align on the problem, then steal the right patterns
+
+I ran a workshop with the eng lead and PM to lock a problem statement and an outcome. We landed on reducing sales cycle time by 15% by letting prospects self-serve the review.
+
+<Figure src="images/work/trustshare/persona.webp" alt="Compliance admin persona" caption="The compliance admin persona we used as the team grew." />
+
+Competitors like SafeBase and Drata put important documents above the fold. Admins I interviewed confirmed that was what prospects actually needed. I used that for the homepage.
+
+<FigureGrid
+  images={[
+    { src: 'images/work/trustshare/safebase.webp', alt: 'SafeBase competitive screenshot' },
+    { src: 'images/work/trustshare/drata.webp', alt: 'Drata competitive screenshot' },
+  ]}
+  caption="Competitive review: documents and proof points needed to be immediately available."
+/>
+
+An audit of our own site made the same point: prospects did not know where to start. They wanted documents, then policies and controls, plus search for anything not on the homepage.
+
+</section>
+
+<section id="portal">
+
+## Make the portal approachable
+
+I reduced choices on the homepage so documents, policies, and controls could lead. Sketches and lo-fi concepts were validated with users before high-fidelity.
+
+<Figure src="images/work/trustshare/sitemap.webp" alt="Updated TrustShare sitemap" caption="A tighter sitemap, with documents, policies, and controls more prominent." />
+
+<FigureGrid
+  images={[
+    { src: 'images/work/trustshare/lofi-1.webp', alt: 'Low-fidelity homepage concept' },
+    { src: 'images/work/trustshare/lofi-2.webp', alt: 'Low-fidelity homepage variation' },
+  ]}
+  caption="Lo-fi homepage concepts tested before visual design."
+/>
+
+High-fidelity put shared documents at the top, made policies and controls easier to find, and added search for artifacts that were not featured.
+
+As enterprises came on, six or more documents crowded the top of the page. We moved documents down so the layout could scale, added in-progress certifications with descriptions, custom URLs, and richer content on policies, controls, and files — which cut follow-up questions.
+
+<FigureGrid
+  images={[
+    { src: 'images/work/trustshare/control.webp', alt: 'Control details on the live portal' },
+    { src: 'images/work/trustshare/policy-live.webp', alt: 'Policy details on the live portal' },
+  ]}
+  caption="Policy and control detail pages, with context written for prospects."
+/>
+
+</section>
+
+<section id="admin">
+
+## Fix branding, invitations, and deal tracking
+
+Branding was too thin for teams that wanted the portal to feel like their own site. I redesigned logo and color controls so compliance and sales could invite prospects into something on-brand.
+
+Invitations, company info, and documents lived in separate views. I combined users and companies into one place to manage opportunities, invitations, shared files, questionnaires, and activity.
+
+<Figure src="images/work/trustshare/branding.webp" alt="TrustShare branding settings" caption="Branding: logo and color so the portal can feel like the customer’s site." />
+
+<FigureGrid
+  images={[
+    { src: 'images/work/trustshare/companies-list.webp', alt: 'Admin list of prospect companies' },
+    { src: 'images/work/trustshare/company.webp', alt: 'Company and deal detail' },
+    { src: 'images/work/trustshare/invite.webp', alt: 'Invite a prospect' },
+    { src: 'images/work/trustshare/invited.webp', alt: 'Invitation sent confirmation' },
+  ]}
+  caption="Deal and invitation flow, consolidated into one admin experience."
+/>
+
+Reporting showed which pages and files were viewed or downloaded so teams could prioritize updates. Deal values rolled up so compliance could show revenue they were protecting. A CRM integration kept opportunity data in sync through the cycle.
+
+<Figure src="images/work/trustshare/reporting.webp" alt="TrustShare business intelligence dashboard" caption="Reporting on portal usage and deal value in the security-review stage." />
+
+</section>
+
+<section id="outcomes">
+
+## What changed
+
+After launch, usage grew among startups, then mid-market and enterprise. We iterated through the last quarter of the year as those customers came on.
+
+<div class="metrics">
+  <div class="metric">
+    <strong>20%</strong>
+    <span>shorter sales cycle over the following six months</span>
+  </div>
+  <div class="metric">
+    <strong>90+</strong>
+    <span>customers, up from 30+, with about $400K revenue impact</span>
+  </div>
+  <div class="metric">
+    <strong>80%</strong>
+    <span>growth in the existing customer user base</span>
+  </div>
+  <div class="metric">
+    <strong>25%</strong>
+    <span>more prospect invitations</span>
+  </div>
+</div>
+
+Admins spent less time on reviews. Centralized documents and questionnaires reduced errors. Invitations happened earlier in the sales cycle. Some teams stopped answering questionnaires and sent people to the portal instead.
+
+<blockquote class="quote">
+  “When we refer a customer or prospect to TrustShare, it mitigates the need for a questionnaire entirely.”
+  <br />
+  <span class="caption">Mick, Compliance Admin</span>
+</blockquote>
+
+**Next.** Authoring and publishing FAQs on the portal, plus deeper brand controls like fonts and tone.
+
+</section>

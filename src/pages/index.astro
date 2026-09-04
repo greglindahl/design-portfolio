@@ -1,0 +1,31 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import { withBase } from '../lib/base';
+
+const projects = (await getCollection('work')).sort((a, b) => a.data.order - b.data.order);
+---
+
+<BaseLayout title="Greg Lindahl – UX Portfolio">
+  <main class="wrap">
+    <section class="hero">
+      <h1>Designing SaaS products people can actually use.</h1>
+      <p>
+        I’m a UX designer with over 10 years of experience creating intuitive
+        user experiences for startup and enterprise software, rooted in empathy.
+      </p>
+    </section>
+    <section class="project-list" aria-label="Selected work">
+      {projects.map((project) => (
+        <ProjectCard
+          href={withBase(`work/${project.id}`)}
+          title={project.data.title}
+          outcomeHeadline={project.data.outcomeHeadline}
+          image={project.data.heroImage}
+          tags={[...project.data.tags, project.data.role, project.data.year]}
+        />
+      ))}
+    </section>
+  </main>
+</BaseLayout>

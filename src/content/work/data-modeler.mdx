@@ -1,0 +1,110 @@
+---
+title: Data Modeler
+outcomeHeadline: Customer implementations that do not depend on a solution architect
+company: Workiva
+role: UX Designer
+year: "2020"
+tags: [Enterprise, Audit, SaaS]
+heroImage: images/work/data-modeler/hero.webp
+order: 5
+summary: Data Modeler is one of five apps in Workiva’s Database Toolbox. I designed it so teams could create records from a source, map them into the graph, and validate before review — work that used to live in a desktop app and a Slack thread.
+sections:
+  - { id: overview, label: Overview }
+  - { id: problem, label: Problem }
+  - { id: discovery, label: Discovery }
+  - { id: design, label: Design }
+  - { id: outcomes, label: Outcomes }
+---
+
+<section id="overview">
+
+## Overview
+
+Workiva connects people, documents, and spreadsheets so structured and unstructured data can feed reports, presentations, and compliance output. Data Modeler creates customer data in that platform for audit and reporting.
+
+I led research, workshops, IA, wires, prototypes, tests, collaboration with three engineers, and a share of product management (roadmap, tickets).
+
+<Figure src="images/work/data-modeler/hero.webp" alt="Data Modeler application on a laptop" caption="Data Modeler in the Workiva platform." />
+
+</section>
+
+<section id="problem">
+
+## Onboarding did not scale
+
+Audit use required setup. Internal employees did implementations. That experience was painful after purchase, and using staff for every onboard does not scale.
+
+How might we make onboarding customer-facing so users can implement themselves?
+
+**Solution.** Map source columns to graph data types, validate before records are created, and stop relying on Solution Architects for every customer.
+
+Goals: lower onboarding cost, give people tools to validate before create, and eventually let customers run implementations themselves.
+
+</section>
+
+<section id="discovery">
+
+## The pain was review, not import
+
+Kickoff covered outcomes, persona, and hypotheses with client services and audit partners. Today’s process used a separate desktop app. Getting it into the cloud product was a priority.
+
+A journey map showed import and cleanup were not the bottleneck. Validation of mappings before review was. Review itself was a Slack ask, an assigned reviewer, and comments in a document that was not the mapping. People wasted time hopping between the two.
+
+Workiva already had tasks, comments, and history. Those belonged in the mapping experience.
+
+<FigureGrid
+  images={[
+    { src: 'images/work/data-modeler/journey.webp', alt: 'Implementation journey notes' },
+    { src: 'images/work/data-modeler/journey-map.webp', alt: 'User journey map' },
+  ]}
+  caption="Journey work that made the review loop visible."
+/>
+
+</section>
+
+<section id="design">
+
+## Map like a spreadsheet, review in the same place
+
+Users cared most about mapping every source header to a data type. Miss one, and it hurts later. An outline panel grouped headers and types so people could see the full set or drill in.
+
+<Figure src="images/work/data-modeler/home.webp" alt="Data Modeler home" caption="Home and navigation into a mapping project." />
+
+**Data mapping.** A table they could tab through was the most important test finding. The outline let them jump sheets without losing place.
+
+<Figure src="images/work/data-modeler/mapping.webp" alt="Spreadsheet-style data mapping table" caption="Spreadsheet-like mapping: speed over novelty." />
+
+**Detail view.** A scannable list of properties on a type, plus relationships on the same view, so users were not defining everything at once.
+
+<Figure src="images/work/data-modeler/detail.webp" alt="Detailed view of a mapped data type" caption="Detail on a type, including relationships." />
+
+**Validation and collaboration.** Run checks before requesting approval. Keep the sheet metaphor. Use existing history and comments so implementer and reviewer stay in one place.
+
+<FigureGrid
+  images={[
+    { src: 'images/work/data-modeler/validation.webp', alt: 'Validation results on mapped data' },
+    { src: 'images/work/data-modeler/comments.webp', alt: 'Comments on a mapping' },
+  ]}
+  caption="Validate first, then comment in product instead of Slack and a side doc."
+/>
+
+</section>
+
+<section id="outcomes">
+
+## Faster reviews, one platform
+
+<div class="metrics">
+  <div class="metric">
+    <strong>12 hours / week</strong>
+    <span>saved on average because validation ran before approval</span>
+  </div>
+  <div class="metric">
+    <strong>One platform</strong>
+    <span>no more hopping between a desktop tool and the web app</span>
+  </div>
+</div>
+
+**Next.** Learn from internal users and partners, then sequence the work that has to happen before this is customer-facing.
+
+</section>

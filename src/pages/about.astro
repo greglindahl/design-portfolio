@@ -1,0 +1,88 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import { withBase } from '../lib/base';
+
+const projects = (await getCollection('work')).sort((a, b) => a.data.order - b.data.order);
+const portrait = withBase('images/about/portrait.webp');
+---
+
+<BaseLayout title="About – Greg Lindahl" description="Background, process, and approach of UX designer Greg Lindahl.">
+  <main class="wrap about-grid">
+    <section>
+      <img class="portrait" src={portrait} alt="Portrait of Greg Lindahl" />
+    </section>
+    <section class="about-stats">
+      <div>
+        <div class="stat-value">10+ years</div>
+        <div class="stat-label">designing SaaS for startups and enterprise</div>
+      </div>
+      <div>
+        <div class="stat-value">Lead UX</div>
+        <div class="stat-label">TrustCloud, Cloud Elements, and product teams</div>
+      </div>
+      <div>
+        <div class="stat-value">20%</div>
+        <div class="stat-label">shorter sales cycle on TrustShare</div>
+      </div>
+      <div>
+        <div class="stat-value">Lean UX</div>
+        <div class="stat-label">research, workshops, and fast validation</div>
+      </div>
+    </section>
+    <section class="about-copy">
+      <div>
+        <h2>Background</h2>
+        <p>
+          Hello, I’m Greg Lindahl, a user experience designer with over 10 years
+          of experience designing SaaS applications for startup and enterprise
+          companies. I help creative and technology teams succeed by providing a
+          voice for the user and designing with their needs in mind.
+        </p>
+        <p>
+          Prior to UX, I was an assistant principal and teacher. That work gave
+          me storytelling, presenting, critiquing, and facilitating skills I still
+          use every week. I completed UX coursework at night and on weekends
+          while taking on website design on the side, then moved into the field
+          full time.
+        </p>
+        <p>
+          I would love the opportunity to help your business create delightful
+          and impactful experiences.
+        </p>
+      </div>
+      <div>
+        <h2>How I work</h2>
+        <p>
+          My preferred workflow combines Lean UX and design thinking. My best
+          work happens on teams that want a solid product vision, well-defined
+          outcomes, and a user-first process.
+        </p>
+        <p>
+          I start by talking with and observing users so I can build empathy and
+          understand the problem — often by trying the task myself. After
+          research, I work with the team to define the problem and the outcome,
+          get a concept in front of a user quickly, and let what we learn drive
+          the next iteration.
+        </p>
+        <p>
+          Facilitating workshops, moving ideas from whiteboard to low-fidelity
+          wireframes, and testing before code ships are part of my regular
+          routine.
+        </p>
+      </div>
+    </section>
+    <section class="project-list" aria-label="Selected work">
+      {projects.map((project) => (
+        <ProjectCard
+          href={withBase(`work/${project.id}`)}
+          title={project.data.title}
+          outcomeHeadline={project.data.outcomeHeadline}
+          image={project.data.heroImage}
+          tags={[...project.data.tags, project.data.year]}
+        />
+      ))}
+    </section>
+  </main>
+</BaseLayout>

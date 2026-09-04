@@ -1,0 +1,63 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import CaseStudyNav from '../components/CaseStudyNav.astro';
+
+interface Section {
+  id: string;
+  label: string;
+}
+
+interface Props {
+  title: string;
+  description: string;
+  outcomeHeadline: string;
+  company: string;
+  role: string;
+  year: string;
+  tags: string[];
+  summary: string;
+  sections: Section[];
+}
+
+const {
+  title,
+  description,
+  outcomeHeadline,
+  company,
+  role,
+  year,
+  tags,
+  summary,
+  sections,
+} = Astro.props;
+---
+
+<BaseLayout title={`${title} – Greg Lindahl`} description={description}>
+  <main class="wrap case">
+    <CaseStudyNav sections={sections} />
+    <article>
+      <header class="case-hero">
+        <p class="case-kicker">{year} · {tags.join(' · ')}</p>
+        <h1>{outcomeHeadline}</h1>
+        <p class="case-lede">{summary}</p>
+        <dl class="facts">
+          <div>
+            <dt>Role</dt>
+            <dd>{role}</dd>
+          </div>
+          <div>
+            <dt>Company</dt>
+            <dd>{company}</dd>
+          </div>
+          <div>
+            <dt>Year</dt>
+            <dd>{year}</dd>
+          </div>
+        </dl>
+      </header>
+      <div class="case-body">
+        <slot />
+      </div>
+    </article>
+  </main>
+</BaseLayout>

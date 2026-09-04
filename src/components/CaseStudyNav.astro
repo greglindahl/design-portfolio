@@ -1,0 +1,45 @@
+---
+interface Props {
+  sections: { id: string; label: string }[];
+}
+
+import { withBase } from '../lib/base';
+
+const { sections } = Astro.props;
+const backHref = withBase();
+---
+
+<nav class="case-nav" aria-label="On this page">
+  <a href={backHref}>Back</a>
+  {sections.map((section) => (
+    <a href={`#${section.id}`} data-section={section.id}>{section.label}</a>
+  ))}
+</nav>
+
+<script>
+  const links = [...document.querySelectorAll<HTMLAnchorElement>('.case-nav a[data-section]')];
+  const ids = links.map((link) => link.dataset.section).filter(Boolean) as string[];
+  const sections = ids
+    .map((id) => document.getElementById(id))
+    .filter((el): el is HTMLElement => Boolean(el));
+
+  const setActive = (id: string) => {
+    for (const link of links) {
+      link.classList.toggle('is-active', link.dataset.section === id);
+    }
+  };
+
+  if (sections[0]) setActive(sections[0].id);
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      const visible = entries
+        .filter((entry) => entry.isIntersecting)
+        .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+      if (visible?.target.id) setActive(visible.target.id);
+    },
+    { rootMargin: '-20% 0px -60% 0px', threshold: [0.1, 0.25, 0.5] },
+  );
+
+  for (const section of sections) observer.observe(section);
+</script>

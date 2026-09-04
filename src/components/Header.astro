@@ -1,0 +1,30 @@
+---
+import { withBase } from '../lib/base';
+
+const path = Astro.url.pathname.replace(/\/$/, '') || '/';
+
+const links = [
+  { href: withBase(), label: 'Work', match: 'work' },
+  { href: withBase('about'), label: 'About', match: 'about' },
+];
+
+function isCurrent(match: string) {
+  if (match === 'work') {
+    return path === '' || path === '/' || path.endsWith('/design-portfolio') || path.includes('/work');
+  }
+  return path.includes('/about');
+}
+---
+
+<header class="site-header">
+  <a class="brand" href={withBase()}>
+    <span class="brand-name">Greg Lindahl</span>
+    <span class="brand-role">UX Designer</span>
+  </a>
+  <nav class="site-nav" aria-label="Primary">
+    {links.map((link) => (
+      <a href={link.href} aria-current={isCurrent(link.match) ? 'page' : undefined}>{link.label}</a>
+    ))}
+    <a href="https://www.linkedin.com/in/greglindahl1/" rel="noreferrer" target="_blank">LinkedIn</a>
+  </nav>
+</header>
