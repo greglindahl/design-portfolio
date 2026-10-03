@@ -3,19 +3,25 @@ interface Props {
   href: string;
   title: string;
   outcomeHeadline: string;
-  image: string;
+  image?: string;
   tags: string[];
   cta?: string;
 }
 
 import { withBase } from '../lib/base';
 
-const { href, outcomeHeadline, image, tags, cta = 'Read the story →' } = Astro.props;
-const src = withBase(image);
+const { href, title, outcomeHeadline, image, tags, cta = 'Read the story →' } = Astro.props;
+const src = image ? withBase(image) : undefined;
 ---
 
 <a class="project-card" href={href}>
-  <img src={src} alt="" />
+  {src ? (
+    <img src={src} alt="" />
+  ) : (
+    <div class="project-card-fallback" aria-hidden="true">
+      <span>{title}</span>
+    </div>
+  )}
   <div class="project-meta">
     {tags.map((tag) => <span>{tag}</span>)}
   </div>

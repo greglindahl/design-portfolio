@@ -147,12 +147,24 @@ ul {
   gap: 18px;
 }
 
-.project-card img {
+.project-card img,
+.project-card-fallback {
   width: 100%;
   border-radius: var(--radius);
   background: #ececec;
   aspect-ratio: 16 / 10;
   object-fit: cover;
+}
+
+.project-card-fallback {
+  display: flex;
+  align-items: flex-end;
+  padding: 28px;
+  background: #111;
+  color: #fafafa;
+  font-size: clamp(22px, 3vw, 32px);
+  letter-spacing: -0.03em;
+  font-weight: 560;
 }
 
 .project-meta {

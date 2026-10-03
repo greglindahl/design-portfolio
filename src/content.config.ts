@@ -10,7 +10,7 @@ const work = defineCollection({
     role: z.string(),
     year: z.string(),
     tags: z.array(z.string()),
-    heroImage: z.string(),
+    heroImage: z.string().optional(),
     order: z.number(),
     summary: z.string(),
     sections: z.array(
