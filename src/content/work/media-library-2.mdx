@@ -38,18 +38,11 @@ This was not another page in Media Library. We were deciding how every customer 
 
 ## The library had become the limiting factor
 
-The gallery was flat and fragmented. Customers could not organize the way they already thought about their work. Finding an asset meant scrolling, guessing, or leaving Greenfly.
+The gallery was flat. Customers already had a structure. Greenfly did not.
 
-I kept hearing the same workarounds:
+The workarounds were specific. A Nuggets producer keeps an Excel sheet of gallery names and tags because uploaders do not name things the same way. The NBA is sitting on about 165,000 assets and more than 2,000 galleries, with no hierarchy, next to a SharePoint structure they already use. The NFL is closer to 300,000 assets. Time filters block a historical search, and the description is “the most important piece of info.” The grid hides it, so they live in the table. Premier League Productions called the archive a “smorgasbord of old stuff.”
 
-- Spreadsheets next to the product, because the library could not hold the structure
-- One-off folders and naming schemes that only one person understood
-- Painful onboarding every time a season or campaign started over
-- No clean way to scale the same operation across seasons, teams, or properties
-
-The problem was not that people wanted “folders.” The problem was that Greenfly did not reflect how they already ran content operations.
-
-Greenfly’s current gallery structure is flat and fragmented. It fights the way customers think about seasons, campaigns, productions, and shows — and it blocks the platform from growing.
+The problem was not that people wanted folders. The library could not hold the way they already ran a season, a campaign, or a show.
 
 **How might we rebuild Media Library so it matches the way customers already organize work, and so the rest of Greenfly can build on it?**
 
@@ -59,21 +52,11 @@ Greenfly’s current gallery structure is flat and fragmented. It fights the way
 
 ## Discovery at a scale the old library never had
 
-I treated this as product strategy work, not a UI audit. If we were going to rebuild the foundation, we needed to hear it from more than one team and one vertical.
+I treated this as product strategy work, not a UI audit. If we were going to rebuild the foundation, it had to hold up across more than one team and one vertical.
 
-Discovery included:
+It was two rounds with the same customers coming back. Discovery ran September through October 2025. Wireframes went back to them in November. Search tests ran January and February 2026. Pro sports (MLB live content and player social, the NBA, the NFL, the Revolution, Premier League Productions), college (Illinois, Iowa, Wisconsin), and entertainment (Bravo, Peloton, Universal, MSNBC and MS NOW). Product and customer success were in the room. They already carried the workarounds.
 
-- 25+ customer interviews
-- Three verticals: professional sports, college, and entertainment
-- Jobs-to-be-done
-- Competitive analysis
-- Customer workshops and co-design sessions
-- Synthesis with PM and customer success
-- Alignment with leadership before we committed the roadmap
-
-PM and CS were in it from the start. They already carried the workarounds. I needed their partnership — and executive buy-in — because this was going to change how the company talked about the product, not just how a gallery looked.
-
-Customers asked for more research time after the first rounds. They felt heard and wanted to help shape it. That is unusual. It also told us we were on a problem they actually lived with.
+Bringing the same people back to the wires mattered more than adding a new interview. They were shaping the model, not reacting to a concept once.
 
 </section>
 
@@ -91,7 +74,9 @@ People grouped content into a hierarchy that followed the business: a container 
 
 Different words. Same jobs. Same nesting.
 
-That was the insight that changed the project. We were not designing a better flat gallery. We were designing for a mental model customers already had — one Greenfly had never shown them.
+That became a decision I tested, not a metaphor. Up to three folder levels. The gallery is the fourth. Assets live in galleries, not in folders. Bravo rated that model a 4 and understood assets do not live in folders. Peloton said four levels is enough and they would likely use three: program, year, discipline. The Nuggets mapped it to season, then opponent, then game. Universal wanted folders, then galleries, then assets, so talent would not face a flat list of 20 galleries.
+
+One model. Their labels.
 
 </section>
 
@@ -101,13 +86,13 @@ That was the insight that changed the project. We were not designing a better fl
 
 Once the pattern was clear, the strategy got simpler. Every decision had to support three jobs:
 
-**Collect.** Get content in without losing where it belongs.  
-**Organize.** Let the hierarchy match the business, not a generic folder tree.  
-**Distribute.** Find it again and send it out without leaving the system.
+**Collect.** Get content in without losing where it belongs. For a lot of teams that is an import, not an upload. Colleges watch a PhotoShelter, Box, or Drive folder. Iowa’s confidence in the homepage dropped until those imports were on it.  
+**Organize.** Let the hierarchy match the business. Archive is part of that job. Bravo and MS NOW archive a season or a show. MSNBC archives bookings the day of, films after about two weeks, podcasts weekly, and called archive “incredibly useful.”  
+**Distribute.** Find it again and send it out. Saved search is for the team that runs the same query every week. Bravo browses by show and does not expect to save a search. MS NOW called saved searches extremely useful for re-air copy. Both can be true.
 
-Those jobs became the product principles. If a request did not make collect, organize, or distribute clearer, it waited.
+Those jobs became the product principles. If a request did not make collect, organize, or distribute clearer, it waited. Carousel posting, gallery duplication, public links, and SharePoint sync came up. They sit behind hierarchy, import, and search.
 
-That framing also made the conversation with engineering and leadership easier. We were not arguing for folders. We were arguing for a content operations platform the rest of the roadmap could sit on — search, metadata, automation, AI, permissions, ingestion.
+That framing also made the conversation with engineering and leadership easier. We were arguing for a content operations platform the rest of the roadmap could sit on — search, metadata, automation, AI, permissions, ingestion.
 
 </section>
 
@@ -119,21 +104,17 @@ Design started after the model was shared, not before. I did not walk the team t
 
 The system had to answer a short list of hard problems:
 
-**Hierarchy.** Create and live in a structure that can be a season, a campaign, a production, or a show — without teaching a new mental model.
+**Hierarchy.** Up to three folder levels, then the gallery. A season, a campaign, a production, or a show can use that shape without learning a new one.
 
-**Home and navigation.** Land in the work you are in, not a flat sea of assets.
+**Home.** Land in the work in front of you. Quick actions were a win for Peloton, Bravo, Iowa, and Wisconsin. The NFL said they would not change the day. They go to the library and search by description. The actions also have to change by role. MLB live-content producers need upload. They should not be able to delete a gallery full of content, and invite has to be tiered the same way.
 
-**Moving assets.** Re-home content when the real world changes, which it always does.
+**Search.** Find across the hierarchy, then keep the query if the team will run it again. I did not leave the pattern to a vote. The test compared two approaches on time to the right asset, wrong turns, and trust. Product and design make the call for the 80 percent case. Customers also disagreed on the logic. Illinois wanted AND, as in LeBron and Nike. The Nuggets wanted OR, so a miss in the tags does not hide the asset. AI tags split the same way. The NFL leans on them because human tags are inconsistent. Illinois wants them off, because duplicate jersey numbers tag the wrong player.
 
-**Search and saved searches.** Find across the hierarchy, then keep the queries people run every week.
+**Moving assets, bulk actions, and labels.** Operations teams re-home content and move more than one file. Verticals share the model and still need their own names.
 
-**Bulk actions.** Operations teams do not move one file at a time.
+These are the wireframes from the customer-call prototype. I also built a working prototype in Lovable and used it twice: early validation with customers, and the source of truth handed to engineering. The screens below are the Figma wires behind that. They are not a launch build.
 
-**Customization.** Verticals share a model and still need their own labels and defaults.
-
-These are the wireframes from the customer-call prototype. They are the screens we put in front of people while the model was still being tested, not a launch build.
-
-Home has to land in the work, and an empty library has to offer a way in — including the sources colleges already collect from.
+Home has to land in the work. An empty library has to offer a way in, including the sources colleges already collect from.
 
 <Figure src="images/work/media-library-2/home.webp" alt="Media Library home with quick actions and recent assets, galleries, and requests" caption="Home: upload, create a gallery, create a folder, or create a request, then the assets, galleries, and requests already in motion." />
 
@@ -149,7 +130,7 @@ Hierarchy is a season, then the kind of work inside it, then the gallery where t
 
 <Figure src="images/work/media-library-2/gallery.webp" alt="Scoring Highlights gallery with assets, overview, and public settings" caption="Scoring Highlights is the gallery. The path is All Files, Season 2025, In-Game. Assets live here." />
 
-Search suggests tags as you type. A detailed query can be named, saved, and opened again with the filters still on it.
+Search suggests a tag as you type. A detailed query can be named and opened again. Browse-first teams do not have to use it.
 
 <Figure src="images/work/media-library-2/search-suggest.webp" alt="Library search for James with a player tag suggestion for LeBron James" caption="Typing James offers a player tag for LeBron James, and other names, before the grid changes." />
 
@@ -165,13 +146,13 @@ Search suggests tags as you type. A detailed query can be named, saved, and open
 
 ## Validation with customers, then tradeoffs with engineering
 
-We took the model back to the people who had described it. Co-design and reviews changed what we kept. Some hierarchy ideas were too rigid. Some search ideas were too early. The jobs stayed. The UI moved.
+We took the model back to the people who had described it. The November wires changed what we kept. Some hierarchy ideas were too rigid. Some search ideas were too early. The jobs stayed.
 
-Implementation started before every question was closed. That is the honest version. I worked with PM and engineering on what had to ship first so the foundation was real: structure you can create, assets you can place, a home that matches the work.
+The product is in alpha now. Beta is the middle of October. General availability is before the end of the year. What we are validating is the model itself, especially how people organize content. Follow-ups with key customers are scheduled. They are not done. This case study stays open as those land.
 
-Phasing mattered. If we tried to land search, automation, and AI on a library that still thought in a flat gallery, we would have rebuilt the ceiling. The first release is the model. The next releases are what the model unlocks.
+Implementation started before every question was closed. I worked with product and engineering on what had to be real first: a structure you can create, assets you can place, a home that matches the work, and permissions that change with the role. Migration off the old gallery, who can delete, and how content gets imported are product decisions. I stayed in them.
 
-Technical constraints showed up immediately — migration from the old gallery, permissions, ingestion paths. Those are product decisions. I stayed in them instead of handing over a file and stepping back.
+Phasing mattered. Search, automation, and AI on a library that still thought in a flat gallery would have rebuilt the ceiling. The first release is the model. The next releases are what the model unlocks.
 
 </section>
 
@@ -179,17 +160,11 @@ Technical constraints showed up immediately — migration from the old gallery, 
 
 ## The outcome so far is the platform, not a launch metric
 
-Engineering is still in it. I am not going to invent a usage number.
+Engineering is still in it. I am not going to invent a usage number, and I am not going to treat an alpha as proof.
 
-What we do have:
+What we do have is an early signal and a dated path. In the November wireframe reviews, several teams rated homepage relevance, and their confidence they could start their top tasks, around 4 out of 5. The four-level model was understood without a new mental model. Iowa’s confidence dropped until imports were on the homepage, which is why collect is an import path and not only an upload button. Customers are now in alpha against that organization model. Beta is the middle of October. General availability is before the end of the year. The follow-ups that test how people actually organize are still ahead of us.
 
-- A shared product strategy across design, PM, CS, and leadership
-- A roadmap that treats Media Library as the foundation, not a feature
-- Customers who asked to keep going because they recognized their own model
-- CS feedback that the direction matches the workarounds they have been supporting for years
-- A clear place for search, metadata, automation, and AI to land later
-
-That is the impact of this phase. We changed what Greenfly is building next, not only what a gallery looks like.
+The other outcome is the roadmap. Media Library is the foundation the next work sits on: search, metadata, automation, permissions, and AI. That sequence came out of the research. Structure and a role-aware home first. Search on top of a library that can hold the work.
 
 </section>
 
@@ -203,6 +178,6 @@ I left realizing organization was not the problem. Mental models were. Every cus
 
 The biggest insight was not hierarchy. It was that the hierarchy already existed in how people talked about their season, their campaign, their show. Our job was to stop asking them to translate.
 
-**What’s next.** Finish the implementation, then put search, automation, and recommendations on top of a library that can actually hold the work. AI only helps if the foundation is honest.
+**What’s next.** Finish the alpha validation, including the follow-ups on how people organize, then beta and general availability. Search, automation, and recommendations come after a library that can hold the work. AI only helps if the foundation is honest.
 
 </section>
