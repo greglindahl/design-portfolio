@@ -347,6 +347,10 @@ ul {
   margin: 28px 0;
 }
 
+.figure-narrow {
+  max-width: 280px;
+}
+
 .figure img,
 .figure-grid img {
   width: 100%;
